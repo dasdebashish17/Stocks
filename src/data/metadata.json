@@ -1,0 +1,40 @@
+{
+    "SECTORS":
+        {
+            "SOFTWARE": ["TCS", "WIPRO", "INFY", "TECHM", "LTTS", "HCLTECH",
+                "PERSISTENT", "TATAELXSI", "SIEMENS", "COFORGE", "KPITTECH"],
+            "FMCG": ["ITC", "BRITANNIA", "HINDUNILVR", "DABUR", "TATACONSUM", "NESTLEIND", "MARICO", "DMART",
+                "GODREJCP", "GODREJIND", "VBL"],
+            "PETROLEUM": [],
+            "WATCH_AND_GOLD": ["TITAN"],
+            "HOME_ELECTRONICS_AND_APPLIANCES": ["DIXON", "CROMPTON", "HAVELLS", "VOLTAS"],
+            "INDUSTRIAL_MACHINERY": ["SKF", "CUMMINSIND", "TIMKEN", "MTARTECH"],
+            "HEAVY_ELECTRICAL_EQUIPMENTS": ["BHEL", "ABB", "CGPOWER", "POWERINDIA"],
+            "ENERGY": ["JSWENERGY", "TATAPOWER", "RELIANCE", "ADANIGREEN", "ADANIENT", "ADANIENSOL"],
+            "LOGISTICS": ["CONCOR", "TCI"],
+            "CONSTRUCTIONS": ["JSWINFRA", "LT"],
+            "PORTS": ["ADANIPORTS"],
+            "DEFENCE": ["BDL", "HAL", "BEL", "PARAS", "DATAPATTNS", "ASTRAMICRO", "IDEAFORGE"],
+            "CEMENT": [],
+            "STEEL": ["BHARATFORG"],
+            "REAL_ESTATE": ["BRIGADE", "PRESTIGE"],
+            "ELECTRICALS": [],
+            "AUTOMOBILES": ["ASHOKLEY", "M&M", "BAJAJ-AUTO", "TVSMOTOR", "TATAMOTORS", "MARUTI",
+                "JBMA", "EICHERMOT", "ESCORTS", "SWARAJENG", "OLECTRA"],
+            "AUTO_PARTS": ["BOSCHLTD", "MOTHERSON", "ENDURANCE"],
+            "TELECOM": ["BHARTIARTL"],
+            "TYRES": ["BALKRISIND", "APOLLOTYRE"],
+            "HOSPITALS": ["APOLLOHOSP"],
+            "HOTELS": ["INDHOTEL"],
+            "RAILWAYS": ["BEML", "TITAGARH", "IRCTC", "IRCON", "IRFC"],
+            "BANKS_AND_FINANCIAL_INST": ["AXISBANK", "HDFCBANK", "ICICIBANK", "ICICIPRULI", "SBIN", "BAJAJHLDNG",
+                "KOTAKBANK", "MOTILALOFS", "MCX", "CDSL", "IEX", "SUNDARMFIN", "IDFCFIRSTB",
+                "UNIONBANK", "CUB", "IDBI"],
+            "CHEMICALS": ["CHAMBLFERT"],
+            "METALS": ["VEDL"],
+            "TEXTILE": ["GRASIM"],
+            "PHARMA": []
+        },
+    
+    ""
+}
