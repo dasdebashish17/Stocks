@@ -28,16 +28,11 @@ class Analyse:
         Check if the stock price has gone below the bolinger band limits
         :return:
         """
-        buy_indicator = False
         lower_price = self.low_price[-1]
         close_price = self.close_price[-1]
         bolinger_band_lower_limit = self.indicator_obj.bolinger_band_data["lower_band"][-1]
-
-        if (lower_price < 1.02 * bolinger_band_lower_limit):
-            buy_indicator = True
-
-        return buy_indicator
-
+        ratio = (bolinger_band_lower_limit - lower_price)/bolinger_band_lower_limit
+        return ratio
 
 
     def rsi_analysis(self):
@@ -47,16 +42,13 @@ class Analyse:
         """
         buy_indicator = False
         rsi_limit = self.indicator_obj.rsi_data[-1]
-        if rsi_limit < 38:
-            buy_indicator = True
-
-        return buy_indicator
+        ratio = (self.indicator_obj.rsi_threshold - rsi_limit) / self.indicator_obj.rsi_threshold #highly positive ratios are good
+        return ratio
 
 
     def analyse_indicators(self):
-        buy_indicator = False
-        buy_indicator = buy_indicator | self.bolinger_band_analysis()
-        buy_indicator = buy_indicator | self.rsi_analysis()
+        bolinger_band_buy_likelihood = self.bolinger_band_analysis()
+        rsi_buy_likelihood = self.rsi_analysis()
 
-        return buy_indicator
+        return bolinger_band_buy_likelihood, rsi_buy_likelihood, self.indicator_obj.rsi_threshold #highly positive ratios are good
 

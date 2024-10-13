@@ -101,6 +101,8 @@ class Resample:
 
         for week_id in range(num_weeks):
             df_local = self.stock_df.query(f"WEEK_ID == {week_id}")
+            if df_local.empty:
+                continue
             CH_TIMESTAMP = df_local['CH_TIMESTAMP'].tolist()[0]
             CH_TRADE_HIGH_PRICE = max(df_local['CH_TRADE_HIGH_PRICE'])
             CH_TRADE_LOW_PRICE = min(df_local['CH_TRADE_LOW_PRICE'])

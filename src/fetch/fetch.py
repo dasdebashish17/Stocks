@@ -59,6 +59,8 @@ class Fetch:
         Fetch the historic data associated with the stock symbol
         """
         self.stock_df = equity_history(self.stock_symbol, self.series, self.start_date, self.end_date)
+        if self.stock_df.empty:
+            return None
         self.stock_df['WEEK_ID'] = -1
         self.stock_df = self.stock_df.sort_values('CH_TIMESTAMP')
         self.stock_df['WEEKDAY'] = self.stock_df['CH_TIMESTAMP'].apply(lambda x: self.get_day(x))
@@ -68,6 +70,7 @@ class Fetch:
         for idx in range(len(self.ref_sunday_list)):
             self.stock_df.loc[(self.stock_df['WEEK_ID'] == -1) & (self.stock_df['DATETIME'] < self.ref_sunday_list[idx]), 'WEEK_ID'] = idx
 
+        return True
 
     def get_daily_data(self):
         """
