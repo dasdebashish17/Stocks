@@ -40,7 +40,7 @@ def get_stock_list(stock_info_excel):
 
 # Get today's date and one year ago date
 end_date = datetime.datetime.now()
-start_date = end_date - datetime.timedelta(days=365)
+start_date = end_date - datetime.timedelta(days=365*4)
 
 # List of NSE stock symbols (remember to append '.NS' for NSE stocks)
 stock_info_excel = r"D:\git\Stocks\src\data\stocks.xlsx"
