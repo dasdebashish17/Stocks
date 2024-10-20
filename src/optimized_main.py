@@ -35,7 +35,7 @@ def get_stock_list(stock_info_excel):
     stock_info_df = pd.read_excel(stock_info_excel)
     stock_list = stock_info_df["STOCK_NAME"].tolist()
     stock_list = [f"{stock}.NS" for stock in stock_list]
-    return stock_list
+    return sorted(stock_list)
 
 
 # Get today's date and one year ago date
