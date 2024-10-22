@@ -1,0 +1,12 @@
+## MEDIUM
+
+https://medium.com/@jan_marcel_kezmann/all-8-types-of-time-series-classification-methods-2c8e4b323ea2
+* Time series definition
+* Distance based methods
+* Interval and frequency based methods
+* Dictionary based methods
+* Shapelet based methods
+* Kernel based methods
+* Feature based methods
+
+
