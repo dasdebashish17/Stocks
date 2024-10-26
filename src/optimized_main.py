@@ -22,7 +22,7 @@ def get_stock_list(stock_info_excel) -> list:
     # read by default 1st sheet of an excel file
     stock_info_df = pd.read_excel(stock_info_excel)
     stock_list = stock_info_df["STOCK_NAME"].tolist()
-    stock_list = [f"{stock}.NS" for stock in stock_list]
+    stock_list = sorted(list(set([f"{stock}.NS" for stock in stock_list])))
     return sorted(stock_list)
 
 
@@ -111,6 +111,20 @@ def fetch_daily_stock_data(stock_symbol:str) -> pd.DataFrame:
 
     return stock_data_daily
 
+
+
+def get_marketcap(stock_symbol:str) -> float:
+    """
+    Get the market cap of a stock
+    :param stock_symbol:
+    :return:
+    """
+    stock = yf.Ticker(stock_symbol)
+    stock_info = stock.info
+
+    # Check if market cap information is available
+    market_cap = stock_info.get("marketCap")
+    return market_cap
 
 
 
