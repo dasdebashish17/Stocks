@@ -1,3 +1,4 @@
 
 *.pyc
 src/stock_analysis.csv
+src/data/~$stocks.xlsx
